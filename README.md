@@ -1,28 +1,22 @@
 # Project Title
-    VectorIO
+ VectorIO
 
 ## Overview
 
->What is your app? Give a brief description in a couple of sentences###
+>What is your app? Give a brief description in a couple of sentences.
 
-VectorIO is a website that you can get tech help and info about different computer/I.T. problems.
+VectorIo is a website that will (as of right now) help tech people in IT departments like IT Help Desk, technicals, Relocation Technicians, IT support, and IT infrastructure. This website is made for quick and easy use with more common problems and information. Also if you have some not-so-common problems we do have forms that people can comment on and put their ideas together.
 
 ### Problem Space
 
->Why is your app needed? Give any background information around any pain points or other reasons.
+>Why is your app needed? Give any background information about any pain points or other reasons.
 
-VectorIo is a website that will (as of right now) help tech people in IT department like IT Help Desk, techinicals , Relocation Techinions, ITsupport and IT infrastructure. This website is made for quick and easy used with more commenon problem and infomation. Also if you have some not so common problem we do have forms that people can comment and put there ideas together.
+Sometimes when tech looking for a solution to a problem, we have to do a lot of Google searching and click on another website. We are going to try to stop and also give information about the item and model and version of that product, to be more easily used.
 
-### User Profile
 
->Who will use your app? How will they use it? Add any special considerations that your app must take into account. 
+### Features And User Profile
 
-   Anyone can go on the site(as of Right Now) and comment away and also look for solution
-### Features
-
-   >List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe how these features are implemented, only _what_ needs to be implemented.
-
-   As a user, I want to find article, posts or general infomation about a computer hardware, Assicaties, wiring, software, OS, and other infomation. If I was to look at forms or article or information I as a user should have the option to choose out of my searching (If I got to it)
+ As a user, I want to find articles, posts, or general information about computer hardware, accessories, wiring, software, OS, and other information. If I were to look at forms or articles or information I as a user should have the option to choose out of my search.
 
 ## Implementation
 
@@ -32,40 +26,40 @@ VectorIo is a website that will (as of right now) help tech people in IT departm
 libraries to save time or provide more functionality. Be sure to 
 research any potential limitations.
 
-    React
-    MySQL
-    Express
-    Clinet libraries:
-        - react
-        - react-router
-        - axios
-        - (Mayeb More)
-    Server libraries:
-        - knux
-        - express
-        - (Maybe More)
+ React
+ MySQL
+ Express
+ Client libraries:
+ - react
+ - react-router
+ - Axios
+ - (Maybe More)
+ Server libraries:
+ - knex
+ - express
+ - (Maybe More)
     
 
 ### APIs
 
 >List any external sources of data that will be used in your app.
-    Im going to making my own API.
+ I'm going to make my API.
 
-   No external API's, I'm making my own
+ No external APIs, I'm making my own
 
 ### Sitemap
 
-   > List the pages of your app with brief descriptions. You can show this visually, or write it out.
+ > List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-    Home Page
-    List of Catogorlies Page
-    This items in this Catogories Page
-    Forms Page
-    Forms has to be link to the Catogoies as well Page
-    Abouts Page
-    (MAYBE) Login, Register Page
+ HomePage ("/")
+ ComputerComponnets ("/ComputerComponnets")
+ ComputerComponnet("/ComputerComponnet/:id")
+ Posts("/ComputerComponnet/:id/Posts")
+ Post("/ComputerComponnet/:id/Post/:id")
+ latestPost(/Posts)
+ Abouts Page(/About)
 
-![](PageRoute.jpeg)
+ ![](PageRoute.jpeg)
 
 ### Mockups
 
@@ -86,8 +80,6 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 #### Other Ideas Drawings
 ![](OtherIdeasPages.jpg)
 
-
-
 ### Data
 
 Describe your data and the relationships between the data points. You can show this visually using diagrams, or write it out. 
@@ -106,31 +98,31 @@ No Parameters
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"title": "Display Port Cable (DP)",
-		"image": "dp.png",
-		"gerernal_info": "A DisplayPort cable is used to connect a 
-		computer or other device to a monitor or display device. It
-		 ....",
-		"versionModel_id": 1,
-		"update": "1223345432432",
-		"category": "cable",
-		"solution_id": 1;
-	},
-	{
-		"id": 2,
-		"title": "CAT5 (Ethernet Cable)",
-		"image": "dp.png",
-		"gerernal_info": "A DisplayPort cable is used to connect a 
-		computer or other device to a monitor or display device. It
-		 ....",
-		"versionModel_id": 2,
-		"update": "1223345432432",
-		"category": "cable",
-		"solution_id": 2;
-	}
-	.........
+ {
+ "id": 1,
+ "title": "Display Port Cable (DP)",
+ "image": "dp.png",
+ "gerernal_info": "A DisplayPort cable is used to connect a 
+ computer or other device to a monitor or display device. It
+ ....",
+ "versionModel_id": 1,
+ "update": "1223345432432",
+ "category": "cable",
+ "solution_id": 1;
+ },
+ {
+ "id": 2,
+ "title": "CAT5 (Ethernet Cable)",
+ "image": "dp.png",
+ "gerernal_info": "A DisplayPort cable is used to connect a 
+ computer or other device to a monitor or display device. It
+ ....",
+ "versionModel_id": 2,
+ "update": "1223345432432",
+ "category": "cable",
+ "solution_id": 2;
+ }
+ .........
 ]
 ```
 
@@ -142,18 +134,18 @@ Parameters:
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"title": "Display Port Cable (DP)",
-		"image": "dp.png",
-		"gerernal_info": "A DisplayPort cable is used to connect a 
-		computer or other device to a monitor or display device. It
-		 ....",
-		"versionModel_id": 1,
-		"update": "1223345432432",
-		"category": "cable",
-		"solution_id": 1;
-	},
+ {
+ "id": 1,
+ "title": "Display Port Cable (DP)",
+ "image": "dp.png",
+ "gerernal_info": "A DisplayPort cable is used to connect a 
+ computer or other device to a monitor or display device. It
+ ....",
+ "versionModel_id": 1,
+ "update": "1223345432432",
+ "category": "cable",
+ "solution_id": 1;
+ },
 ]
 ```
 **Get /ComputerComponite/:id/VersionOrModels**
@@ -164,108 +156,108 @@ Parameters:
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"title": "Display Port Cable (DP)",
-		"information": "VESA announced version 2.1 of the DisplayPort 
-		standard on 17 October 2022. This version incorporates the
-		 new DP40 and DP80 cable certifications, which test 
-		 DisplayPort cables for proper operation at the UHBR10 
-		 (40  Gbit/s) and UHBR20 (80  Gbit/s) speeds introduced in 
-		 version 2.0. Additionally, it revises some of the electrical 
-		 requirements for DisplayPort devices in order to improve 
-		 integration with USB4."
-	},
+ {
+ "id": 1,
+ "title": "Display Port Cable (DP)",
+ "information": "VESA announced version 2.1 of the DisplayPort 
+ standard on 17 October 2022. This version incorporates the
+ new DP40 and DP80 cable certifications, which test 
+ DisplayPort cables for proper operation at the UHBR10 
+ (40  Gbit/s) and UHBR20 (80  Gbit/s) speeds introduced in 
+ version 2.0. Additionally, it revises some of the electrical 
+ requirements for DisplayPort devices in order to improve 
+ integration with USB4."
+ },
 ]
 ```
 **Get /ComputerComponite/:id/solutions**
-- Get will get the solutions by looking at the solutions ComputerComponite id which should be a list
+- Get will get the solutions by looking at the solutions ComputerComponite ID which should be a list
 
 Parameters:
-- id: ComputerComponite id as a number and as well of the solutions id
+- id: ComputerComponite id as a number and as well of the id of the solution
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"solution": "1.  **Verify Correct Cable Connection**: 
-		Ensure the DP cable is properly connected to both the 
-		source device (computer, graphics card, etc.) and 
-		the display. Make sure the cable is fully seated in 
-		both ports."
-	},
+ {
+ "id": 1,
+ "solution": "1.  **Verify Correct Cable Connection**: 
+ Ensure the DP cable is properly connected to both the 
+ source device (computer, graphics card, etc.) and 
+ the display. Make sure the cable is fully seated in 
+ both ports."
+ },
 ]
 ```
 **Get /Posts**
 - Get will get the list of Post
 
 Parameters:
-- id: Post id , Comment id, and ComputerComponite id as a number
+- id: Post id, Comment id, and ComputerComponite id as a number
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"ComputerComponite_id": 1,
-		"comment_id": 1,
-		"title": "Black screen with audio problem, I was trying to 
-		fix the DP but its not working",
-		"Post Date": 45534546745,*-+
-	},
+ {
+ "id": 1,
+ "ComputerComponite_id": 1,
+ "comment_id": 1,
+ "title": "Black screen with audio problem, I was trying to 
+ fix the DP but it's not working",
+ "Post Date": 45534546745,*-+
+ },
 ]
 ```
 **Post  /Posts**
-- Post will post a post	
+- Post will post a post 
 
 Parameters:
-- id: Post id , Comment id, and ComputerComponite id as a number
+- id: Post id, Comment id, and ComputerComponite id as a number
 
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"ComputerComponite_id": 1,
-		"comment_id": 1,
-		"title": "Black screen with audio problem, I was trying to 
-		fix the DP but its not working",
-		"Post Date": 45534546745,*-+
-	},
+ {
+ "id": 1,
+ "ComputerComponite_id": 1,
+ "comment_id": 1,
+ "title": "Black screen with audio problem, I was trying to 
+ fix the DP but it's not working",
+ "Post Date": 45534546745,*-+
+ },
 ]
 ```
 **Get /Post/:id/Comments**
-- Get will get the Comments for  that persific post
+- Get will get the Comments for that specific post
 
 Parameters:
-- id: Post id , Comment id  as a number
+- id: Post id, Comment id  as a number
 
 Response: 
 ```
 [
-	{
-		"id": 1,
-		"post_id": 1,
-		"text": "Have u tried to push it all the way in",
-		"likes": 0
-	},
+ {
+ "id": 1,
+ "post_id": 1,
+ "text": "Have u tried to push it all the way in",
+ "likes": 0
+ },
 ]
 ```
 **Post /Post/:id/Comments**
 - Post will Post a comment on that Post
 
 Parameters:
-- id: Post id , Comment id  as a number
+- id: Post id, Comment id  as a number
 
 Response: 
 
 ```
 [
-	{
-		"id": 1,
-		"post_id": 1,
-		"text": 1,
-		"likes": 0
-	},
+ {
+ "id": 1,
+ "post_id": 1,
+ "text": 1,
+ "likes": 0
+ },
 ]
 ```
 
@@ -273,15 +265,15 @@ Response:
 - put will change like a comment on that Post
 
 Parameters:
-- id: Post id , Comment id  as a number
+- id: Post id, Comment id  as a number
 
 Response: 
 
 ```
 [
-	{
-		"likes": 1
-	},
+ {
+ "likes": 1
+ },
 ]
 ```
 
@@ -291,14 +283,14 @@ Response:
 >Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation working back from the capstone due date. 
 
 **Make and format the DB with data**
-- Get data for website and formate that that will be useful for the user and format  it 
+- Get data for a website and format that will be useful for the user and format  it 
 
 **Create server**
 - express project with routing
 
 **Create migrations**
 
-**Create seeds with sample  ComputerComponite, Posts, Comment, Solution and VersionOrModel**
+**Create seeds with sample  ComputerComponite, Posts, Comment, Solution, and VersionOrModel**
 
 **Create client**
 - react project with routes and pages
@@ -306,26 +298,23 @@ Response:
 **Features**
 - Home Page
 - List/Nav/Page for the Category
-	- User can have a Nav bar to see what catgory or make a Pagfe for it
-- ComputerComponite Page when clciking the a category and see the items and click on the items will give details about that item.
-	- There will also be a list of solution on that page
-	- Also different version or model with general info
+ - User can have a Nav bar to see what category or make a Pagfe for it
+- ComputerComponite Page when clicking the category and seeing the items and clicking on the items will give details about that item.
+ - There will also be a list of solutions on that page
+ - Also different versions or models with general info
 - Post Page will give a list of Post
-	- Post will be link to the article and also link the the Commetns section 
-	- Comment will have a liking system
-	
-**Bug fixes**
+ - Post will be linked to the article and also link to the Comments section 
+ - Comment will have a liking system
+    
+**Bugfixes**
 
 **DEMO DAY**
-
-
 
 ## Future Implementations
 
 >Your project will be marked based on what you committed to in the above document. Here, you can list any additional features you may complete after the MVP of your application is built, or if you have extra time before the Capstone due date.
 
 - Login and Register User System
-- More Data for Not only Computer Cable but Hardware , and Coding and COmputer Hardware
+- More Data for Not only Computer Cable but Hardware, and Coding Computer Hardware
 - Dislike Button 
-
 
