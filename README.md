@@ -22,7 +22,7 @@ VectorIo is a website that will (as of right now) help tech people in IT departm
 
    >List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe how these features are implemented, only _what_ needs to be implemented.
 
-   As a user, I want to find article, form or general infomation about a computer hardware, Assicaties, wiring, software, OS, and other infomation. If I was to look at forms or article or information I as a user should have the option to choose out of my searching (If I got to it) As a user I might be albe to create a account, login and manage my account and also having a likeing system (ONLY IF, EVERYTHING ELSE IS DONE).
+   As a user, I want to find article, posts or general infomation about a computer hardware, Assicaties, wiring, software, OS, and other infomation. If I was to look at forms or article or information I as a user should have the option to choose out of my searching (If I got to it)
 
 ## Implementation
 
@@ -64,6 +64,8 @@ research any potential limitations.
     Forms has to be link to the Catogoies as well Page
     Abouts Page
     (MAYBE) Login, Register Page
+
+![](PageRoute.jpeg)
 
 ### Mockups
 
@@ -325,4 +327,5 @@ Response:
 - Login and Register User System
 - More Data for Not only Computer Cable but Hardware , and Coding and COmputer Hardware
 - Dislike Button 
+
 
