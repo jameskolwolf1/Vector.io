@@ -1,0 +1,177 @@
+@use './variables' as *;
+
+@mixin tabletView {
+    @media (min-width: $min_tablet) {
+        @content;
+    }
+}
+
+@mixin desktopView {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin PageHeader{
+
+    font-size: $m_pageHeader;
+    line-height: 2.25rem;
+    font-weight: 600;
+    color: $primaryWhite;
+
+    @include tabletView{
+        font-size: $dt_pageHeader;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: $primaryWhite;
+    }
+    @include desktopView{
+        font-size: $dt_pageHeader;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: $primaryWhite;
+    }
+}
+@mixin subHeader{
+
+    font-size: $m_subHeader;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: $primaryWhite;
+
+    @include tabletView{
+
+        font-size: $dt_subHeader;
+        line-height: 2rem;
+        font-weight: 600;
+        color: $primaryWhite;
+    }
+    @include desktopView{
+
+        font-size: $dt_subHeader;
+        line-height: 2rem;
+        font-weight: 600;
+        color: $primaryWhite;
+    }
+}
+@mixin labelLinkButton{
+    font-size: $m_labelLinkButtons;
+    line-height: 1.25rem;
+    font-weight: 600;
+
+    @include tabletView{
+        font-size: $dt_labelLinkButtons;
+        line-height: 1.375rem;
+        font-weight: 600;
+    }
+    @include desktopView{
+        font-size: $dt_labelLinkButtons;
+        line-height: 1.375rem;
+        font-weight: 600;
+    }
+}
+@mixin tableHeader{
+    font-size: $m_tableHeader;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $secondarySlate;
+
+    @include tabletView{
+        font-size: $dt_tableHeader;
+        line-height: .75rem;
+        font-weight: 600;
+        color: $secondarySlate;
+    }
+    @include desktopView{
+        font-size: $dt_tableHeader;
+        line-height: .75rem;
+        font-weight: 600;
+        color: $secondarySlate;
+    }
+}
+@mixin bodyLarge{
+    font-size: $m_bodyLarge;
+    line-height: 1.625rem;
+    font-weight: 400;
+    color: $primaryWhite;
+
+    @include tabletView{
+
+        font-size: $dt_bodyLarge;
+        line-height: 1.75rem;
+        font-weight: 400;
+        color: $primaryWhite;
+    }
+    @include desktopView{
+
+        font-size: $dt_bodyLarge;
+        line-height: 1.75rem;
+        font-weight: 400;
+        color: $primaryWhite;
+    }
+}
+@mixin bodyMedium{
+    font-size: $m_bodyMedium;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: $primaryWhite;
+
+    @include tabletView{
+        font-size: $dt_bodyMedium;
+        line-height: 1.375rem;
+        font-weight: 400;
+        color: $primaryWhite;
+    }
+    @include desktopView{
+
+        font-size: $dt_bodyMedium;
+        line-height: 1.375rem;
+        font-weight: 400;
+        color: $primaryWhite;
+    }
+}
+@mixin bodySmall{
+    font-size: $m_bodySmall;
+    line-height: 1rem;
+    font-weight: 400;
+    color: $primaryWhite;
+
+    @include tabletView{
+        font-size: $dt_bodySmall;
+        line-height: 1.125rem;
+        font-weight: 400;
+        color: $primaryWhite;
+    }
+    @include desktopView{
+        font-size: $dt_bodySmall;
+        line-height: 1.125rem;
+        font-weight: 400;
+        color: $primaryWhite;
+        
+    }
+}
+@mixin noDisplay{
+
+    @include tabletView{
+
+        display: none;
+
+    }
+    @include desktopView{
+        
+        display: none;
+    }
+}
+@mixin listCatagories{
+
+    display: none;
+
+    @include tabletView{
+
+        display: flex;
+    }
+    @include desktopView{
+
+        display: flex;
+    }
+}

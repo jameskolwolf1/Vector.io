@@ -1,0 +1,45 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: black;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    @include PageHeader;
+}
+h2{
+    @include subHeader;
+}
+h3{
+    @include labelLinkButton;
+}
+h4{
+    @include tableHeader;
+}
+
+.largeBody{
+
+    @include bodyLarge;
+}
+.mediumBody{
+
+    @include bodyMedium;
+}
+.smallBody{
+
+    @include bodySmall;
+}
