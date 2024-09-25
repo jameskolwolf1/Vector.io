@@ -1,19 +1,23 @@
 import './HomePage.scss';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+
 
 
 function HomePage(){
 
     const [componentList, setComponentList] = useState([]);
+    const [postList, setPostList] = useState([]);
     useEffect(() => {
 
         try {
 
             const getList = async () =>{
 
-                const data = await axios.get("http://localhost:8080/computerComponents");
-                const list = data.data;
+                const dataComponents = await axios.get("http://localhost:8080/computerComponents");
+                const list = dataComponents.data;
+                const dataPost = await axios.get("http://localhost:8080/posts");
+                setPostList(dataPost.data);
                 setComponentList(list);
                 
             }
@@ -50,11 +54,10 @@ function HomePage(){
             <h1 className='main__title1'>Welcome To </h1>
             <h1 className='main__title2'>Vector.io</h1>
             <p className='main__subtitle'>(Not the game, but all connected)</p>
-
+            <p>AMazingNESS</p>
             <canvas>
                 
             </canvas>
-            <p>AMazingNESS</p>
         </section>
         <article className='articles'>
             <div className='articles__container-cards'>

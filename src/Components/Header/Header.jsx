@@ -1,6 +1,7 @@
 import mobileLogo from '../../../svg/vectorio-favicon-white.svg';
 import './Header.scss';
 
+
 function Header(){
 
     return(
