@@ -1,0 +1,109 @@
+@use './../../styles//partials/global' as *;
+
+.article{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    &__title{
+
+
+    }
+    &__img-container{
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        flex-wrap: nowrap;
+    }
+    &__img1{
+
+        width: 50%;
+        height: 300px;
+    }
+    &__img2{
+
+        width: 50%;
+        height: 300px;
+    }
+    &__info{
+
+        padding-bottom: 20px;
+    }
+    &__button-container{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        
+    }
+    &__button-making{
+
+        width: 45%;
+        height: 5vh;
+        border-radius: 20px;
+        font-size: 20px;
+        border: none;
+        background-color: white;
+    }
+    &__button-looking{
+
+        width: 45%;
+        height: 5vh;
+        border-radius: 20px;
+        font-size: 20px;
+        border: none;
+        background-color: white;
+
+    }
+    &__solution{
+
+        padding-top: 20px;
+
+    }
+    &__container-sol{
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__sol-items{
+
+        display: flex;
+        flex-direction: row;
+    }
+    &__sol-title{
+
+        padding-right: 15px;
+    }
+    &__sol-index{
+
+        background-color: white;
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 30px;
+    }
+    &__versionOrModels{
+
+        margin-top: 20px;
+    }
+    &__container-ver{
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 2px solid white;
+    }
+    &__ver-title{
+
+        text-decoration: underline;
+        padding-bottom: .625rem;
+    }
+    &__ver-info{
+
+        padding-bottom: 5px;
+    }
+
+}
