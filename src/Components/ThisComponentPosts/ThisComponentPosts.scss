@@ -1,6 +1,6 @@
 @use './../../styles//partials/global' as *;
 
-.posts{
+.thisComponent{
 
     display: flex;
     flex-direction: column;
@@ -24,13 +24,9 @@
 
     &__items{
 
-        display: block;
-        
-        margin-top: 20px;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-
-        
+        margin-top: 10px;
+        box-shadow: -1px 1px 8px 2px white;
+        margin-bottom: 20px;
 
     }
     &__items-title{
@@ -44,7 +40,7 @@
 
     }
 }
-.posts__items:hover h2, .posts__items:hover p{
+.thisComponent__items:hover h2, .thisComponent__items:hover p{
 
 
         background-color: white;

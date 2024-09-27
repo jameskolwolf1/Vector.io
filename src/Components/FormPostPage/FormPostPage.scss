@@ -1,6 +1,6 @@
 @use './../../styles//partials/global' as *;
 
-.section{
+.formPage{
 
     display: flex;
     flex-direction: column;
@@ -54,12 +54,18 @@
 
         
     }
+    &__post-link{
+
+        text-decoration: none;
+    }
     &__post{
 
-        padding-top: 20px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-        border: 2px solid white;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        box-shadow: -1px 1px 8px 2px white;
+
     }
     &__post-title{
         padding-bottom: 10px;
@@ -73,4 +79,9 @@
         background-color: white;
         border-radius: 20px;
     }
+}
+.formPage__post:hover h2, .formPage__post:hover p{
+
+    color: black;
+    background-color: white;
 }

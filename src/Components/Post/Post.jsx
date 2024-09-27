@@ -38,10 +38,6 @@ function Post() {
 
     e.preventDefault();
 
-    if(commentId === null){
-
-        return;
-    }
 
     try {
 
@@ -88,40 +84,40 @@ function Post() {
   }
 
   return (
-    <article className="vector">
-      <div className="vector__post">
-        <h1 className="vector__title">
+    <article className="post">
+      <div className="post__post">
+        <h1 className="post__title">
           {post.title}
         </h1>
-        <p className="vector__des">
+        <p className="post__des">
           {post.description}
         </p>
       </div>
-      <div className="vector__from-container">
-        <form onSubmit={handleSubmit} className="vector__from">
+      <div className="post__from-container">
+        <form onSubmit={handleSubmit} className="post__from">
 
-            <h2 className="vector__from-title">Post Comment</h2>
-            <textarea name="text" className="vector__from-text"></textarea>
-            <button type="submit" className="vector__from-button">Post Comment</button>
+            <h2 className="post__from-title">Post Comment</h2>
+            <textarea name="text" className="post__from-text"></textarea>
+            <button type="submit" className="post__from-button">Post Comment</button>
 
         </form>
       </div>
-      <div className="vector__comment-section">
+      <div className="post__comment-section">
         <h2>Comments</h2>
         {commentList.map(comment =>
-          <div key={comment.id} className="vector__comment-container">
-            <div className="vector__comment-part1">
-              <p className="vector__comment">
+          <div key={comment.id} className="post__comment-container">
+            <div className="post__comment-part1">
+              <p className="post__comment">
                 {comment.text}
               </p>
             </div>
-            <div className="vector__comment-part2">
-              <img className="vector__img" src={likeIcon} 
+            <div className="post__comment-part2">
+              <img className="post__img" src={likeIcon} 
               onClick={() => {
                 setCommentId(comment.id);
                 handleLikes();
               }}/>
-              <p name="likes" className="vector__likes">
+              <p name="likes" className="post__likes">
                 {comment.likes}
               </p>
             </div>

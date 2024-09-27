@@ -50,22 +50,20 @@ function HomePage(){
 
     return(
         <>
-        <section className='main'>
-            <h1 className='main__title1'>Welcome To </h1>
-            <h1 className='main__title2'>Vector.io</h1>
-            <p className='main__subtitle'>(Not the game, but all connected)</p>
+        <section className='home'>
+            <h1 className='home__title1'>Welcome To </h1>
+            <h1 className='home__title2'>Vector.io</h1>
+            <p className='home__subtitle'>(Not the game, but all connected)</p>
             <p>AMazingNESS</p>
             <canvas>
                 
             </canvas>
-        </section>
-        <article className='articles'>
-            <div className='articles__container-cards'>
+            <div className='home__container-cards'>
                 {threeComponents().map((comp) => (
-                    <div className='articles__card' key={comp.id}>
-                        <div className='articles__card-items'>
-                        <img className='articles__card-img' src={comp.image_product}/>
-                        <h2 className='articles__card-title'>{comp.title}</h2>
+                    <div className='home__card' key={comp.id}>
+                        <div className='home__card-items'>
+                        <img className='home__card-img' src={comp.image_product}/>
+                        <h2 className='home__card-title'>{comp.title}</h2>
                         </div>
                     </div>
                 ))}
@@ -73,7 +71,8 @@ function HomePage(){
             <div>
                 <h2>New posts</h2>
             </div>
-        </article>
+        </section>
+
         </>
     );
 }

@@ -41,45 +41,44 @@ function ArticlePage(){
         return<div>Loading</div>
     }
 
-
     return(
 
-        <article className="article">
-            <h1 className="article__title">{component.title}</h1>
-            <div className="article__img-container">
-                <img className="article__img1" src={component.image_product}/>
-                <img className="article__img2" src={component.image_info}/>
+        <article className="articlePage">
+            <h1 className="articlePage__title">{component.title}</h1>
+            <div className="articlePage__img-container">
+                <img className="articlePage__img1" src={component.image_product}/>
+                <img className="articlePage__img2" src={component.image_info}/>
             </div>
-            <p className="article__info">{component.general_info}</p>
+            <p className="articlePage__info">{component.general_info}</p>
 
-            <div className="article__button-container">
-                <Link className="article__button-link" to={`/computerComponents/${id}/posts`} >
-                <button className="article__button-making">Making a Post</button>
+            <div className="articlePage__button-container">
+                <Link className="articlePage__button-link" to={`/computerComponents/${id}/posts`} >
+                <button className="articlePage__button-making">Making a Post</button>
                 </Link>
-                <Link className="article__button-link" to={`/thisComponentPosts/${id}/posts`}>
-                <button className="article__button-looking">Look at Posts</button>
+                <Link className="articlePage__button-link" to={`/thisComponentPosts/${id}/posts`}>
+                <button className="articlePage__button-looking">Look at Posts</button>
                 </Link>
             </div>
-            <div className="article__solution">
+            <div className="articlePage__solution">
                 {solutionList.map((sol, index) =>(
-                    <div className="article__container-sol" key={sol.id}>
-                        <div className="article__sol-items">
-                        <h2 className="article__sol-title">Solution</h2>
-                        <h2 className="article__sol-index">{index + 1}</h2>
+                    <div className="articlePage__container-sol" key={sol.id}>
+                        <div className="articlePage__sol-items">
+                        <h2 className="articlePage__sol-title">Solution</h2>
+                        <h2 className="articlePage__sol-index">{index + 1}</h2>
                         </div>
-                        <p className="solution__info">{sol.text}</p>
+                        <p className="articlePage__info">{sol.text}</p>
                         
                     </div>
                 ))}
             </div>
-            <div className="article__versionOrModels">
+            <div className="articlePage__versionOrModels">
                 <h2>Versions and Models</h2>
                 {versionOrModelList.map((ver) => (
-                    <div key={ver.id} className="article__container-ver">
-                    <h2 className="article__ver-title">{ver.title}</h2>
-                    <p className="article__ver-info">{ver.info1}</p>
-                    <p className="article__ver-info">{ver.info2}</p>
-                    <p className="article__ver-info">{ver.info3}</p>
+                    <div key={ver.id} className="articlePage__container-ver">
+                    <h2 className="articlePage__ver-title">{ver.title}</h2>
+                    <p className="articlePage__ver-info">{ver.info1}</p>
+                    <p className="articlePage__ver-info">{ver.info2}</p>
+                    <p className="articlePage__ver-info">{ver.info3}</p>
                     </div>
                 ))}
             </div>

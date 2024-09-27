@@ -1,1 +1,39 @@
 @use './../../styles//partials/global' as *;
+
+.posts{
+
+    &__heading{
+
+    }
+    &__container{
+
+    }
+    &__link{
+
+        text-decoration: none;
+    }
+    &__items{
+
+        margin-top: 10px;
+        box-shadow: -1px 1px 8px 2px white;
+        margin-bottom: 20px;
+        
+    }
+    &__title{
+
+        padding-bottom: 10px;
+        text-decoration: underline;
+    }
+    &__info{
+
+
+    }
+}
+
+.posts__items:hover h2, .posts__items:hover p{
+
+
+    background-color: white;
+    color: black;
+
+}

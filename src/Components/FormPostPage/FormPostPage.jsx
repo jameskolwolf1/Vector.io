@@ -56,29 +56,31 @@ function FormPostPage(){
 
     return(
 
-        <section className="section">
-            <h1 className="section__title">Make a Post</h1>
-            <form onSubmit={handleSubmit} className="section__form">
-                <div className="section__form-one">
-                <h2 className="section__form-title">Title</h2>
-                <input name="title" className="section__form-input"></input>
+        <section className="formPage">
+            <h1 className="formPage__title">Make a Post</h1>
+            <form onSubmit={handleSubmit} className="formPage__form">
+                <div className="formPage__form-one">
+                <h2 className="formPage__form-title">Title</h2>
+                <input name="title" className="formPage__form-input"></input>
                 </div>
-                <div className="section__form-two">
-                <h2 className="section__form-des">description</h2>
-                <textarea name="description" className="section__form-text"></textarea>
+                <div className="formPage__form-two">
+                <h2 className="formPage__form-des">description</h2>
+                <textarea name="description" className="formPage__form-text"></textarea>
                 </div>
-                <button type="submit" className="section__button">Post</button>
+                <button type="submit" className="formPage__button">Post</button>
             </form>
-            <div className="section__lists-posts">
-                <h2 className="section__lists-title">Posts About DP Cables</h2>
+            <div className="formPage__lists-posts">
+                <h2 className="formPage__lists-title">Posts About DP Cables</h2>
+                <div className="formPage__lists-container">
                 {postList.map((post) => (
-                    <Link key={post.id} to={`/post/${post.id}`}>
-                    <div className="section__post">
-                        <h2 className="section__post-title">{post.title}</h2>
-                        <p className="section__post-des">{post.description}</p>
+                    <Link className="formPage__post-link" key={post.id} to={`/post/${post.id}`}>
+                    <div className="formPage__post">
+                        <h2 className="formPage__post-title">{post.title}</h2>
+                        <p className="formPage__post-des">{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}
+                </div>
             </div>
         </section>
     );

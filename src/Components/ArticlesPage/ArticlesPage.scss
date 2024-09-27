@@ -1,11 +1,18 @@
 @use './../../styles//partials/global' as *;
 
-.list{
+.articlesPage{
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
+    &__card-link{
+
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
 
 
     &__card{

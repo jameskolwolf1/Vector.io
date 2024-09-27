@@ -34,16 +34,16 @@ function ArticlesPage(){
 
     return(
 
-        <article className='list'>
+        <article className='articlesPage'>
             {componentList.map((comp) => (
-                <Link className='list__card-link'
+                <Link className='articlesPage__card-link'
                 key={comp.id}
                 to={`/computerComponents/${comp.id}`}
                 >
-                <div className='list__card' key={comp.id}>
-                    <div className='list__card-items'>
-                        <img className='list__card-img' src={comp.image_product} />
-                        <h2 className='list__card-title'>{comp.title}</h2>
+                <div className='articlesPage__card' key={comp.id}>
+                    <div className='articlesPage__card-items'>
+                        <img className='articlesPage__card-img' src={comp.image_product} />
+                        <h2 className='articlesPage__card-title'>{comp.title}</h2>
                     </div>
                 </div>
                 </Link>

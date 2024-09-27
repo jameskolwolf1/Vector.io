@@ -5,7 +5,7 @@ p{
     color: white;
     
 }
-.main{
+.home{
 
     display: flex;
     justify-content: center;
@@ -27,16 +27,6 @@ p{
         display: flex;
         justify-content: center;
     }
-}
-
-.articles{
-
-
-    display: flex;
-    flex-direction: column;
-
-
-    
 
     &__container-cards{
 

@@ -38,15 +38,15 @@ function ThisComponentPosts(){
     }
 
     return(
-        <article className='posts'>
-            <h1 className='posts__title'>{`Posts For ${component.title}`}</h1>
+        <article className='thisComponent'>
+            <h1 className='thisComponent__title'>{`Posts For ${component.title}`}</h1>
 
-            <div className='posts__lists'>
+            <div className='thisComponent__lists'>
                 {postList.map((post) => (
-                    <Link className='posts__link' key={post.id} to={`/post/${post.id}`}>
-                    <div className='posts__items'>
-                        <h2 className='posts__items-title'>{post.title}</h2>
-                        <p className='posts__items-des'>{post.description}</p>
+                    <Link className='thisComponent__link' key={post.id} to={`/post/${post.id}`}>
+                    <div className='thisComponent__items'>
+                        <h2 className='thisComponent__items-title'>{post.title}</h2>
+                        <p className='thisComponent__items-des'>{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}
