@@ -1,1 +1,76 @@
 @use './../../styles//partials/global' as *;
+
+.section{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    &__title{
+
+    }
+    &__form{
+        padding-bottom: 30px;
+
+    }
+    &__form-one{
+
+        padding-top: 20px;
+
+    }
+    &__form-title{
+
+
+    }
+    &__form-input{
+
+        width: 100%;
+        height: 3.5vh;
+        padding: 10px;
+    }
+    &__form-two{
+
+        padding-top: 20px;
+        padding-bottom: 30px;
+
+    }
+    &__form-des{
+
+
+    }
+    &__form-text{
+
+        width: 100%;
+        resize: none;
+        height: 15vh;
+        padding: 10px;
+    }
+
+    &__lists-posts{
+
+
+    }
+    &__lists-title{
+
+        
+    }
+    &__post{
+
+        padding-top: 20px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border: 2px solid white;
+    }
+    &__post-title{
+        padding-bottom: 10px;
+        text-decoration:underline;
+    }
+    &__button{
+
+        width: 100%;
+        height: 4vh;
+        font-size: 20px;
+        background-color: white;
+        border-radius: 20px;
+    }
+}

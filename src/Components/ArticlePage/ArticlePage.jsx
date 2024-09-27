@@ -22,7 +22,6 @@ function ArticlePage(){
                 setComponent(data.data);
                 setSolutionList(solutions.data);
                 setVersionOrModelList(versions.data);
-                console.log(solutions.data);
             }
 
             comp();
@@ -54,9 +53,12 @@ function ArticlePage(){
             <p className="article__info">{component.general_info}</p>
 
             <div className="article__button-container">
-                <button as={Link} to={`/computerComponent/${id}/posts`} className="article__button-making"
-                >Making a Post</button>
+                <Link className="article__button-link" to={`/computerComponents/${id}/posts`} >
+                <button className="article__button-making">Making a Post</button>
+                </Link>
+                <Link className="article__button-link" to={`/thisComponentPosts/${id}/posts`}>
                 <button className="article__button-looking">Look at Posts</button>
+                </Link>
             </div>
             <div className="article__solution">
                 {solutionList.map((sol, index) =>(

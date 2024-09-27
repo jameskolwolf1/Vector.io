@@ -1,0 +1,102 @@
+@use './../../styles//partials/global' as *;
+
+.vector{
+
+    display: flex;
+    flex-direction: column;
+
+    &__post{
+
+        border-radius: 20px;
+        background-color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__title{
+
+        
+        color: black;
+    }
+
+    &__des{
+
+        color: black;
+    }
+    &__from-container{
+
+        border-top: 2px solid white;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    &__from{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__from-title{
+
+        padding-bottom: 10px;
+    }
+    &__from-text{
+
+        resize: none;
+        height: 15vh;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    &__from-button{
+
+        border-radius: 20px;
+        padding: 10px;
+        background-color: white;
+        color:black;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    &__comment-section{
+
+        border-top: 2px solid white;
+        padding-top: 20px;
+        margin-top: 20px;
+        
+    }
+    &__comment-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 10vh;
+        max-height: 15vh;
+        border: 2px solid white;
+        justify-content: center;
+        align-items: center;
+    }
+    &__comment-part1{
+
+        width: 85%;
+    }
+    &__comment{
+
+        
+    }
+    &__comment-part2{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding-right: 20px;
+        padding-left: 20px;
+        align-items: end;
+
+    }
+    &__img{
+
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+    }
+}

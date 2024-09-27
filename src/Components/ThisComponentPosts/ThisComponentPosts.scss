@@ -1,0 +1,53 @@
+@use './../../styles//partials/global' as *;
+
+.posts{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    &__title{
+
+        padding-bottom: 20px;
+        text-decoration: underline;
+    }
+    &__lists{
+
+
+    }
+
+    &__link{
+
+        text-decoration: none;
+
+    }
+
+    &__items{
+
+        display: block;
+        
+        margin-top: 20px;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+
+        
+
+    }
+    &__items-title{
+
+        padding-bottom: 10px;
+        text-decoration: underline;
+
+    }
+    &__items-des{
+
+
+    }
+}
+.posts__items:hover h2, .posts__items:hover p{
+
+
+        background-color: white;
+        color: black;
+
+}
