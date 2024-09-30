@@ -45,12 +45,16 @@ function ArticlePage(){
 
         <article className="articlePage">
             <h1 className="articlePage__title">{component.title}</h1>
-            <div className="articlePage__img-container">
+            <div className="articlePage__container">
+            <div className="articlePage__img1-container">
                 <img className="articlePage__img1" src={component.image_product}/>
+            </div>
+            <div className="articlePage__img2-container">
                 <img className="articlePage__img2" src={component.image_info}/>
             </div>
+            <div className="articlePage__info-container">
             <p className="articlePage__info">{component.general_info}</p>
-
+            </div>
             <div className="articlePage__button-container">
                 <Link className="articlePage__button-link" to={`/computerComponents/${id}/posts`} >
                 <button className="articlePage__button-making">Making a Post</button>
@@ -59,7 +63,9 @@ function ArticlePage(){
                 <button className="articlePage__button-looking">Look at Posts</button>
                 </Link>
             </div>
+            </div>
             <div className="articlePage__solution">
+                <h2 className="articlePage__solution-title">List of Solution</h2>
                 {solutionList.map((sol, index) =>(
                     <div className="articlePage__container-sol" key={sol.id}>
                         <div className="articlePage__sol-items">

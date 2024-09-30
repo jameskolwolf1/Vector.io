@@ -1,9 +1,26 @@
 @use './../../styles//partials/global' as *;
+@use './../../styles//partials/mixins' as *;
 
 .post{
 
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include tabletView{
+
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 65rem;
+    }
+
+    @include desktopView{
+
+        padding-left: 20rem;
+        padding-right: 20rem;
+        max-width: 90rem;
+    }
 
     &__post{
 
@@ -44,8 +61,9 @@
 
         resize: none;
         height: 15vh;
-        padding: 10px;
+        padding: 20px;
         border-radius: 20px;
+
     }
     &__from-button{
 
@@ -55,13 +73,19 @@
         color:black;
         margin-top: 20px;
         font-size: 20px;
+        &:hover{
+
+            background-color: black;
+            color: wheat;
+            box-shadow: -1px 0px 4px 3px wheat;
+        }
     }
     &__comment-section{
 
         border-top: 2px solid white;
         padding-top: 20px;
         margin-top: 20px;
-        
+    
     }
     &__comment-container{
         display: flex;
@@ -74,6 +98,7 @@
         border: 2px solid white;
         justify-content: center;
         align-items: center;
+        border-radius: 20px;
     }
     &__comment-part1{
 

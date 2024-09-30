@@ -1,16 +1,20 @@
+import { domAnimation } from "framer-motion";
 import * as THREE from "three";
+
+
+export function modelGlobal(holder){
 
 const x = window.innerWidth;
 const y = window.innerHeight;
 const render = new THREE.WebGLRenderer({ antialias: true });
 
 render.setSize(x, y);
-document.body.appendChild(render.domElement);
+holder.appendChild(render.domElement);
 
-const fov = 75;
+const fov = 85;
 const aspect = x / y;
-const near = 0.1;
-const far = 10;
+const near = 0.5;
+const far = 5;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
 camera.position.z = 2;
@@ -48,4 +52,7 @@ function animate( t = 0){
 }
 
 animate();
+
+
+}
 

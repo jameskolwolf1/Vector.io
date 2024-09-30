@@ -28,6 +28,7 @@ function Header(){
                 src={mobileLogo} 
                 onClick={() => handleHomePage()}
                 />
+                <h2 className='header__logo-title mobileHidden'>Vector.io</h2>
             </div>
             <div className='header__container-articles'
             onClick={() => handleArticlesPage()}>

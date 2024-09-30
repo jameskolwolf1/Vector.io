@@ -1,32 +1,136 @@
 @use './../../styles//partials/global' as *;
+@use './../../styles/partials/mixins' as *;
 
 .articlePage{
 
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    padding: 20px;
+
+    
+    @include tabletView{
+
+        padding: 40px;
+
+    }
+    @include desktopView{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20rem;
+        padding-right: 20rem;
+        justify-content: space-evenly;
+        max-width: 110rem;
+    
+        
+    }
 
     &__title{
 
+        @include tabletView{
+
+        }
 
     }
-    &__img-container{
+    &__container{
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        @include tabletView{
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: none;
+        }
+
+    }
+    &__img1-container{
 
         width: 100%;
         display: flex;
         flex-direction: row;
         padding: 20px;
         flex-wrap: nowrap;
+        justify-content: center;
+        max-width: 30rem;
+        order: 1;
+
+        @include tabletView{
+
+            width: 50%;
+
+        }
+        @include desktopView{
+            padding: 0;
+            justify-content:unset;
+
+        }
+        
     }
     &__img1{
 
-        width: 50%;
+        width: 80%;
+        display: flex;
         height: 300px;
+
+        @include desktopView{
+
+            width: 97%;
+        }
+        
+    }
+    &__img2-container{
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        max-width: 30rem;
+        order: 3;
+
+        @include desktopView{
+            padding: 0;
+            justify-content:unset;
+            
+        }
+
+        @include tabletView{
+
+            width: 50%;
+            order: 2;
+        }
+
     }
     &__img2{
 
         width: 50%;
         height: 300px;
+
+        @include desktopView{
+
+            width: 97%;
+        }
+    }
+    &__info-container{
+
+
+        order: 2;
+        padding-top: 20px;
+
+        @include tabletView{
+
+    
+            order: 3;
+        }
     }
     &__info{
 
@@ -38,11 +142,32 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        order: 4;
+        width: 100%;
+
+        @include desktopView{
+
+        justify-content: flex-end;
+        
+
+        }
         
     }
     &__button-link{
 
         width: 45%;
+
+        
+
+        @include desktopView{
+
+            width: 20%;
+            margin-left: 30px;
+            min-width: 13rem;
+            max-width: 13.5rem;
+        }
+
+        
     }
     &__button-making{
 
@@ -52,6 +177,13 @@
         font-size: 20px;
         border: none;
         background-color: white;
+
+        &:hover{
+
+            background-color: black;
+            color: wheat;
+            box-shadow: 0px 0px 5px 7px wheat;
+        }
     }
     &__button-looking{
 
@@ -62,11 +194,37 @@
         border: none;
         background-color: white;
 
+
+
+        &:hover{
+
+            background-color: black;
+            color: wheat;
+            box-shadow: 0px 0px 5px 7px wheat;
+        }
+
     }
     &__solution{
 
         padding-top: 20px;
 
+        @include desktopView{
+
+       
+            width: 45%;
+        }
+
+    }
+    &__solution-title{
+
+        text-decoration: underline;
+        
+
+    }
+    &__sol__title{
+
+        width: 100%;
+        
     }
     &__container-sol{
         
@@ -92,7 +250,13 @@
     }
     &__versionOrModels{
 
-        margin-top: 20px;
+        padding-top: 20px;
+
+        @include desktopView{
+
+         
+            width: 45%;
+        }
     }
     &__container-ver{
 

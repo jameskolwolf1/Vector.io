@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.17.8",
     "axios": "^1.7.7",
     "express": "^4.21.0",
     "framer-motion": "^11.5.6",
