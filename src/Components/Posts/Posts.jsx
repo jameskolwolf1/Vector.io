@@ -33,7 +33,7 @@ function Posts(){
             <h1 className="posts__heading">Latest Post</h1>
             <div className="posts__container">
                 {postList.map((post) => (
-                    <Link className="posts__link" key={post.id} to={`/posts/${post.id}`}>
+                    <Link className="posts__link" key={post.id} to={`/post/${post.id}`}>
                     <div className="posts__items">
                         <h2 className="posts__title">{post.title}</h2>
                         <p className="posts__info">{post.description}</p>
