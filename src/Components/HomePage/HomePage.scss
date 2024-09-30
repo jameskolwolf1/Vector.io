@@ -1,0 +1,177 @@
+@use './../../styles//partials/global' as *;
+@use "../../styles/partials/mixins" as *;
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+p{
+    color: white;
+    
+}
+.home{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    
+
+
+    &__title1{
+
+        display: flex;
+        justify-content: center;
+    }
+    &__title2{
+
+        display: flex;
+        justify-content: center;
+    }
+    &__subtitle{
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container-cards{
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tabletView{
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+    }
+    &__link{
+
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+
+        @include tabletView{
+
+            margin-left: 70px;
+            width: 50%;
+            max-width: 300px;
+            height: 60vh;
+        }
+    }
+    &__card{
+
+        box-shadow: -2px 3px 6px 8px rgb(255, 255, 255);
+        padding: 2rem;
+        margin-bottom: 5rem;
+        border-radius: 15px;
+    
+    }
+    &__card-items{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__card-img{
+
+        
+        width: 100%;
+        height: 20rem;
+
+        border-radius: 15px;
+    }
+    &__card-title{
+
+
+    }
+    &__subtitle{
+
+        padding-bottom: 3rem;
+    }
+    &__container-post{
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tabletView{
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+    }
+    &__link-posts{
+
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+
+        @include tabletView{
+
+            margin-left: 70px;
+            width: 50%;
+            max-width: 300px;
+            
+        }
+    }
+    &__post{
+
+        box-shadow: -2px 3px 6px 8px rgb(255, 255, 255);
+        padding: 2rem;
+        margin-bottom: 5rem;
+        border-radius: 15px;
+
+    }
+    &__post-items{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__posts-title{
+
+
+    }
+}
+
+.home__post:hover h2{
+
+    background-color: white;
+    color: black;
+}
+.home__post:hover{
+
+    background-color: white;
+}
+
+.home__card:hover h2{
+
+    background-color: white;
+    color: black;
+}
+.home__card:hover{
+
+    background-color: white;
+}
+.test{
+    
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  background-color: black;
+}

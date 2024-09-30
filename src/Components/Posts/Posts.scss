@@ -1,0 +1,66 @@
+@use './../../styles//partials/global' as *;
+@use './../../styles/partials/mixins' as *;
+
+.posts{
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include tabletView{
+
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 65rem;
+    }
+    @include desktopView{
+
+        padding-left: 20rem;
+        padding-right: 20rem;
+        max-width: 65rem;
+    }
+    
+
+    &__heading{
+
+    }
+    &__container{
+
+    }
+    &__link{
+
+        text-decoration: none;
+    }
+    &__items{
+
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        box-shadow: -1px 0px 4px 3px white;
+        border-radius: 1.25rem;
+        border: none;
+        padding: 20px;
+        
+    }
+    &__title{
+
+        padding-bottom: 10px;
+        text-decoration: underline;
+    }
+    &__info{
+
+
+    }
+}
+
+.posts__items:hover h2, .posts__items:hover p{
+
+
+    background-color: white;
+    color: black;
+
+}
+.posts__items:hover{
+
+    background-color: white;
+}

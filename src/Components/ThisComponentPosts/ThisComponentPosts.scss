@@ -1,0 +1,50 @@
+@use './../../styles//partials/global' as *;
+
+.thisComponent{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+
+    &__title{
+
+        padding-bottom: 20px;
+        text-decoration: underline;
+    }
+    &__lists{
+
+
+    }
+
+    &__link{
+
+        text-decoration: none;
+
+    }
+
+    &__items{
+
+        margin-top: 10px;
+        box-shadow: -1px 1px 8px 2px white;
+        margin-bottom: 20px;
+
+    }
+    &__items-title{
+
+        padding-bottom: 10px;
+        text-decoration: underline;
+
+    }
+    &__items-des{
+
+
+    }
+}
+.thisComponent__items:hover h2, .thisComponent__items:hover p{
+
+
+        background-color: white;
+        color: black;
+
+}
