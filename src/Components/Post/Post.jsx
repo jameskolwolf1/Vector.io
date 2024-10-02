@@ -6,20 +6,23 @@ import likeIcon from "/like_icon.png";
 
 function Post() {
   const [post, setPost] = useState(null);
-  const [commentId, setCommentId] = useState(null);
-  const [commentList, setCommentList] = useState(null);
+  const [commentList, setCommentList] = useState([]);
   let { id } = useParams();
+
+  async function getComments (){
+
+    const comment = await axios.get(`http://localhost:8080/posts/${id}/comments`);
+    setCommentList(comment.data);
+  }
 
   useEffect(() => {
     try {
       const object = async () => {
         const data = await axios.get(`http://localhost:8080/posts/${id}`);
-        const comment = await axios.get(
-          `http://localhost:8080/posts/${id}/comments`
-        );
+        const comment = await getComments();
         setPost(data.data);
         setCommentList(comment.data);
-        console.log(comment.data);
+
       };
       object();
     } catch (error) {
@@ -30,7 +33,7 @@ function Post() {
   if (post === null) {
     return <div>Loading</div>;
   }
-  if (commentList === null) {
+  if (commentList.length === 0) {
     return <div>Loading</div>;
   }
 
@@ -58,27 +61,27 @@ function Post() {
         alert("Error making a comment, please check the input field")
     }
   }
+  const handleLikes = async (data, id) => {
 
-  const handleLikes = async (e) => {
+    let addToLike = data;
+    addToLike++;
 
-
-    console.log(commentId);
+    console.log(addToLike);
 
     try {
 
-        const res = await axios.put(`http://localhost:8080/comments/${commentId}`,{
+        const res = await axios.put(`http://localhost:8080/comments/${id}`,{
+            likes: addToLike,
 
-            likes: e.target.likes.value,
         });
 
-        if(res.status === 200){
+        getComments();
 
-            e.target.reset();
-        }
+
 
     } catch (error) {
 
-        alert("Error with clicking comment ")
+        alert("Error with clicking comment ");
     }
 
   }
@@ -114,9 +117,8 @@ function Post() {
             <div className="post__comment-part2">
               <img className="post__img" src={likeIcon} 
               onClick={() => {
-                setCommentId(comment.id);
-                handleLikes();
-              }}/>
+                handleLikes(comment.likes, comment.id); 
+                }}/>
               <p name="likes" className="post__likes">
                 {comment.likes}
               </p>

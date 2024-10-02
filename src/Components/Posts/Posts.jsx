@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Posts(){
 
-    const [postList, setPostList] = useState(null);
+    const [postList, setPostList] = useState([]);
 
     useEffect(() => {
 
@@ -21,9 +21,9 @@ function Posts(){
         } catch (error) {
             console.log(error)
         }
-    })
+    }, [])
 
-    if(postList === null){
+    if(postList.length === 0){
 
         return<div>Loading</div>
     }

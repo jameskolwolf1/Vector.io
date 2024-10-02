@@ -1,16 +1,15 @@
-import { domAnimation } from "framer-motion";
 import * as THREE from "three";
 
 
 export function modelGlobal(holder){
 
+  
 const x = window.innerWidth;
 const y = window.innerHeight;
 const render = new THREE.WebGLRenderer({ antialias: true });
 
 render.setSize(x, y);
 holder.appendChild(render.domElement);
-
 const fov = 85;
 const aspect = x / y;
 const near = 0.5;
@@ -20,7 +19,7 @@ const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 const scene = new THREE.Scene();
 
-const geo = new THREE.DodecahedronGeometry(.5, 1);
+const geo = new THREE.DodecahedronGeometry(.4, 1);
 const mat = new THREE.MeshStandardMaterial({
   color: 0x000000,
   flatShading: true
@@ -30,6 +29,8 @@ const mat = new THREE.MeshStandardMaterial({
 
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
+
+mesh.getWorldScale.x = 300;
 
 const wireMat = new THREE.MeshBasicMaterial({
   color:0xffffff,
@@ -52,7 +53,6 @@ function animate( t = 0){
 }
 
 animate();
-
 
 }
 

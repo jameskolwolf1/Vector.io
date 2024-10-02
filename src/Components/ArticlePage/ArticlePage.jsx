@@ -6,8 +6,8 @@ function ArticlePage(){
 
     let { id } = useParams();
     const [component, setComponent] = useState(null);
-    const [solutionList, setSolutionList] = useState(null);
-    const [versionOrModelList, setVersionOrModelList ] = useState(null);
+    const [solutionList, setSolutionList] = useState([]);
+    const [versionOrModelList, setVersionOrModelList ] = useState([]);
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -36,7 +36,7 @@ function ArticlePage(){
 
         return<div>Loading</div>
     }
-    if(versionOrModelList === null){
+    if(versionOrModelList.length === 0){
 
         return<div>Loading</div>
     }

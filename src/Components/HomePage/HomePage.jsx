@@ -1,4 +1,3 @@
-import './HomePage.scss';
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -13,18 +12,17 @@ function HomePage(){
 
     const [componentList, setComponentList] = useState([]);
     const [postList, setPostList] = useState([]);
-    const modelGlobalContainer = useRef(null);
+    const modelGlobalContainer = useRef(undefined);
     useEffect(() => {
 
-            
-        if(modelGlobalContainer.current){
 
-            modelGlobal(modelGlobalContainer.current);
-        }
 
         try {
 
-           
+            if(modelGlobalContainer.current){
+
+                modelGlobal(modelGlobalContainer.current);
+            }
 
             const getList = async () =>{
 
@@ -43,6 +41,7 @@ function HomePage(){
             console.log(error);
         }
     }, [])
+
 
     if(componentList.length === 0){
 
@@ -85,7 +84,15 @@ function HomePage(){
             <h1 className='home__title2'>Vector.io</h1>
             <p className='home__subtitle'>(Not the game, but all connected)</p>
 
-            <div className='test' ref={modelGlobal}></div>
+            {/* <div className='test' ref={modelGlobal}></div> */}
+            <Canvas camera={{manual:true}}>
+            
+                <mesh>
+                    <dodecahedronGeometry />
+                    <meshStandardMaterial />
+                    <meshBasicMaterial />
+                </mesh>
+            </Canvas>
             <h2 className='home__subtitle' >Three latest Articles</h2>
             <div className='home__container-cards'>
                 {fourComponents().map((comp) => (
@@ -118,3 +125,5 @@ function HomePage(){
 }
 
 export default HomePage;
+import './HomePage.scss';
+import { PerspectiveCamera } from 'three';

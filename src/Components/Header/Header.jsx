@@ -23,7 +23,9 @@ function Header(){
     return(
 
         <header className='header'>
-            <div className='header__container-logo'>
+            <div className='header__container-logo'
+            
+            onClick={() => handleHomePage()}>
                 <img className="header__logo" 
                 src={mobileLogo} 
                 onClick={() => handleHomePage()}
