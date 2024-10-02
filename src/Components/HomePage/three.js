@@ -25,8 +25,6 @@ const mat = new THREE.MeshStandardMaterial({
   flatShading: true
 });
 
-
-
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 

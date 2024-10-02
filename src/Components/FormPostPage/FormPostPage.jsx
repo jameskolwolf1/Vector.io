@@ -67,7 +67,9 @@ function FormPostPage(){
                 <h2 className="formPage__form-des">description</h2>
                 <textarea name="description" className="formPage__form-text"></textarea>
                 </div>
+                <div className="formPage__button-container">
                 <button type="submit" className="formPage__button">Post</button>
+                </div>
             </form>
             <div className="formPage__lists-posts">
                 <h2 className="formPage__lists-title">Posts About DP Cables</h2>

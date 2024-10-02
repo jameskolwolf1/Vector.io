@@ -17,8 +17,8 @@
     }
     @include desktopView{
 
-        padding-left: 20rem;
-        padding-right: 20rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
         max-width: 65rem;
     }
 
@@ -96,9 +96,19 @@
         padding-bottom: 10px;
         text-decoration:underline;
     }
+    &__button-container{
+
+        @include desktopView{
+
+            display: flex;
+            width: 100%;
+            justify-content: end;
+        }
+
+    }
     &__button{
 
-        width: 100%;
+        width: 30%;
         height: 4vh;
         font-size: 20px;
         background-color: white;

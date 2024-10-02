@@ -13,6 +13,7 @@ function Post() {
 
     const comment = await axios.get(`http://localhost:8080/posts/${id}/comments`);
     setCommentList(comment.data);
+
   }
 
   useEffect(() => {
@@ -102,7 +103,7 @@ function Post() {
             <h2 className="post__from-title">Post Comment</h2>
             <textarea name="text" className="post__from-text"></textarea>
             <button type="submit" className="post__from-button">Post Comment</button>
-
+          
         </form>
       </div>
       <div className="post__comment-section">
