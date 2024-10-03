@@ -38,21 +38,21 @@
     font-size: 2.3rem;
     line-height: 1.75rem;
     font-weight: 600;
-    color: $primaryWhite;
+    
 
     @include tabletView{
 
         font-size: 2.3rem;
         line-height: 2rem;
         font-weight: 600;
-        color: $primaryWhite;
+        
     }
     @include desktopView{
 
         font-size: 2.4rem;
         line-height: 2rem;
         font-weight: 600;
-        color: $primaryWhite;
+        
     }
 }
 @mixin labelLinkButton{
@@ -115,20 +115,20 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 400;
-    color: $primaryWhite;
+
 
     @include tabletView{
         font-size: 1.6rem;
         line-height: 1.5rem;
         font-weight: 400;
-        color: $primaryWhite;
+ 
     }
     @include desktopView{
 
         font-size: 1.65;
         line-height: 2rem;
         font-weight: 400;
-        color: $primaryWhite;
+
     }
 }
 @mixin bodySmall{

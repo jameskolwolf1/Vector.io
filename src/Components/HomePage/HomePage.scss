@@ -15,8 +15,6 @@ body {
 p{
     color: white;
     
-    
-    
 }
 
 .home{
@@ -73,7 +71,7 @@ p{
             margin-bottom: 50px;
             width: 50%;
             max-width: 300px;
-            height: 35vh;
+            height: 30rem;
         }
     }
     &__card{
@@ -83,6 +81,7 @@ p{
         padding-bottom: 5rem;
         border-radius: 15px;
         height: 100%;
+        color: white;
 
         @include tabletView{
 
@@ -166,6 +165,7 @@ p{
     &__posts-title{
 
 
+        color: white;
     }
 }
 

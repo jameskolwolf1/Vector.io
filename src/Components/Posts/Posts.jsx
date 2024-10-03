@@ -40,7 +40,7 @@ function Posts(){
                     <Link className="posts__link" key={post.id} to={`/post/${post.id}`}>
                     <div className="posts__items">
                         <h2 className="posts__title">{post.title}</h2>
-                        <p className="posts__info">{post.description}</p>
+                        <p className="posts__info mediumBody">{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}

@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Canvas  } from '@react-three/fiber';
-import { WebGLRenderer } from 'three/src/Three.js';
-import {modelGlobal} from './three';
+import { Canvas, useFrame  } from '@react-three/fiber';
+// import {modelGlobal} from './three';
+import { Mesh } from "three";
 
 
 
@@ -13,6 +13,8 @@ function HomePage(){
     const [componentList, setComponentList] = useState([]);
     const [postList, setPostList] = useState([]);
     const modelGlobalContainer = useRef(undefined);
+
+    
     useEffect(() => {
 
 
@@ -75,23 +77,18 @@ function HomePage(){
         
     }
 
-
-
     return(
         <>
         <section className='home'>
             <h1 className='home__title1'>Welcome To </h1>
             <h1 className='home__title2'>Vector.io</h1>
-            <p className='home__subtitle'>(Not the game, but all connected)</p>
+            <p className='home__subtitle mediumBody'>(Not the game, but all connected)</p>
 
             {/* <div className='test' ref={modelGlobal}></div> */}
-            <Canvas camera={{manual:true}}>
+            <Canvas>
             
-                <mesh>
-                    <dodecahedronGeometry />
-                    <meshStandardMaterial />
-                    <meshBasicMaterial />
-                </mesh>
+            <hemisphereLight args={['#000000', '#ffffff']}/>
+                <Vector />
             </Canvas>
             <h2 className='home__subtitle' >Four latest Articles</h2>
             <div className='home__container-cards'>
@@ -124,6 +121,36 @@ function HomePage(){
     );
 }
 
+function Vector(){
+
+    const meshRef = useRef();
+
+    useFrame(() => {
+
+        if(meshRef.current){
+
+            meshRef.current.rotation.x += .01;
+            meshRef.current.rotation.y += 0.04;
+        }
+
+        
+        
+    });
+
+    return(
+        <mesh ref={meshRef}>
+                    <dodecahedronGeometry args={[3, 1]} />
+                    <meshStandardMaterial 
+                    color={"black"}
+                    flatShading={true}/>
+                    <meshBasicMaterial 
+                    color={"white"}
+                    wireframe={true}/>
+                </mesh>
+    );
+}
+
 export default HomePage;
 import './HomePage.scss';
-import { PerspectiveCamera } from 'three';
+import { PerspectiveCamera } from 'three';import { color } from 'three/webgpu';
+

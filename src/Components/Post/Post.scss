@@ -35,11 +35,12 @@
 
         
         color: black;
+        padding-bottom: 20px;
     }
 
-    &__des{
+    &__des {
 
-        color: black;
+       
     }
     &__from-container{
 
@@ -73,6 +74,8 @@
         color:black;
         margin-top: 20px;
         font-size: 20px;
+        font-weight: bold;
+
         &:hover{
 
             background-color: black;
@@ -86,6 +89,10 @@
         padding-top: 20px;
         margin-top: 20px;
     
+    }
+    &__comment-heading{
+
+        padding-bottom: 20px;
     }
     &__comment-container{
         display: flex;
@@ -124,4 +131,9 @@
         height: 27px;
         margin-right: 10px;
     }
+}
+
+.post__des{
+
+    color: black;
 }

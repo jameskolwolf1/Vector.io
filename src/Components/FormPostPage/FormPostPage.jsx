@@ -61,14 +61,14 @@ function FormPostPage(){
             <form onSubmit={handleSubmit} className="formPage__form">
                 <div className="formPage__form-one">
                 <h2 className="formPage__form-title">Title</h2>
-                <input name="title" className="formPage__form-input"></input>
+                <input name="title" className="formPage__form-input mediumBody"></input>
                 </div>
                 <div className="formPage__form-two">
-                <h2 className="formPage__form-des">description</h2>
-                <textarea name="description" className="formPage__form-text"></textarea>
+                <h2 className="formPage__form-des">Description</h2>
+                <textarea name="description" className="formPage__form-text mediumBody"></textarea>
                 </div>
                 <div className="formPage__button-container">
-                <button type="submit" className="formPage__button">Post</button>
+                <button type="submit" className="formPage__button mediumBody">Post</button>
                 </div>
             </form>
             <div className="formPage__lists-posts">
@@ -78,7 +78,7 @@ function FormPostPage(){
                     <Link className="formPage__post-link" key={post.id} to={`/post/${post.id}`}>
                     <div className="formPage__post">
                         <h2 className="formPage__post-title">{post.title}</h2>
-                        <p className="formPage__post-des">{post.description}</p>
+                        <p className="formPage__post-des mediumBody">{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}

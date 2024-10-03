@@ -34,7 +34,7 @@ research any potential limitations.
  - Axios
  - (Maybe More)
  Server libraries:
- - knex
+ - Knex
  - express
  - (Maybe More)
     
