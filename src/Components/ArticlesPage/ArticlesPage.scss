@@ -1,13 +1,11 @@
-
-
-.articlesPage{
+.articlesPage {
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 
-    &__card-link{
+    &__card-link {
 
         text-decoration: none;
         display: flex;
@@ -16,47 +14,55 @@
     }
 
 
-    &__card{
+    &__card {
 
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 75%;
-        height: 35vh;
+        height: 100%;
         padding: 20px;
         box-shadow: -2px 3px 6px 8px rgb(255, 255, 255);
         border-radius: 15px;
         max-width: 300px;
         min-width: 250px;
-        overflow: hidden;
-        
+
+
     }
-    &__card-items{
+
+    &__card-items {
 
         padding: 20px;
         width: 90%;
     }
 
-    &__card-img{
+    &__card-img {
 
-        width: 100%;
+        width: 150px;
         height: 200px;
         border-radius: 15px;
     }
-    &__card-title{
 
-        display: -webkit-box;
+    &__card-title {
+
+        text-wrap: pretty;
+        font-size: 1.5rem;
+        width: 100%;
+        --max-lines: 3;
         overflow: hidden;
-        line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: var(--max-lines);
+
     }
 }
 
-.articlesPage__card:hover{
+.articlesPage__card:hover {
 
     background-color: white;
 }
-.articlesPage__card:hover h2{
+
+.articlesPage__card:hover h2 {
 
     color: black;
 }
-

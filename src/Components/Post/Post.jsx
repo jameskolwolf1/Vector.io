@@ -6,7 +6,7 @@ import likeIcon from "/like_icon.png";
 
 function Post() {
   const [post, setPost] = useState(null);
-  const [commentList, setCommentList] = useState([]);
+  const [commentList, setCommentList] = useState(null);
   let { id } = useParams();
 
   async function getComments (){
@@ -32,9 +32,9 @@ function Post() {
   }, []);
 
   if (post === null) {
-    return <div>Loading</div>;
+    return <div>Posts is not available right now</div>;
   }
-  if (commentList.length === 0) {
+  if (commentList === 0) {
     return <div>Loading</div>;
   }
 

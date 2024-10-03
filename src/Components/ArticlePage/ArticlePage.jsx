@@ -53,11 +53,11 @@ function ArticlePage(){
                 <img className="articlePage__img2" src={component.image_info}/>
             </div>
             <div className="articlePage__info-container">
-            <p className="articlePage__info">{component.general_info}</p>
+            <p className="articlePage__info largeBody">{component.general_info}</p>
             </div>
             <div className="articlePage__button-container">
-                <Link className="articlePage__button-link" to={`/computerComponents/${id}/posts`} >
-                <button className="articlePage__button-making">Making a Post</button>
+                <Link className="articlePage__button-link " to={`/computerComponents/${id}/posts`} >
+                <button className="articlePage__button-making ">Making a Post</button>
                 </Link>
                 <Link className="articlePage__button-link" to={`/thisComponentPosts/${id}/posts`}>
                 <button className="articlePage__button-looking">Look at Posts</button>
@@ -72,7 +72,7 @@ function ArticlePage(){
                         <h2 className="articlePage__sol-title">Solution</h2>
                         <h2 className="articlePage__sol-index">{index + 1}</h2>
                         </div>
-                        <p className="articlePage__info">{sol.text}</p>
+                        <p className="articlePage__info mediumBody">{sol.text}</p>
                         
                     </div>
                 ))}
@@ -82,9 +82,9 @@ function ArticlePage(){
                 {versionOrModelList.map((ver) => (
                     <div key={ver.id} className="articlePage__container-ver">
                     <h2 className="articlePage__ver-title">{ver.title}</h2>
-                    <p className="articlePage__ver-info">{ver.info1}</p>
-                    <p className="articlePage__ver-info">{ver.info2}</p>
-                    <p className="articlePage__ver-info">{ver.info3}</p>
+                    <p className="articlePage__ver-info mediumBody">{ver.info1}</p>
+                    <p className="articlePage__ver-info mediumBody">{ver.info2}</p>
+                    <p className="articlePage__ver-info mediumBody">{ver.info3}</p>
                     </div>
                 ))}
             </div>

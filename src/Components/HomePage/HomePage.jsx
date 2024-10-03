@@ -93,7 +93,7 @@ function HomePage(){
                     <meshBasicMaterial />
                 </mesh>
             </Canvas>
-            <h2 className='home__subtitle' >Three latest Articles</h2>
+            <h2 className='home__subtitle' >Four latest Articles</h2>
             <div className='home__container-cards'>
                 {fourComponents().map((comp) => (
                     <Link className='home__link' key={comp.id} to={`/computerComponents/${comp.id}`}>
@@ -106,7 +106,7 @@ function HomePage(){
                     </Link>
                 ))}
             </div>
-            <h2 className='home__subtitle'>Three latest Posts</h2>
+            <h2 className='home__subtitle'>Four latest Posts</h2>
             <div className='home__container-post'>
                 {fourPosts().map((post) => (
                     <Link className='home__link-posts' key={post.id} to={`/post/${post.id}`}>

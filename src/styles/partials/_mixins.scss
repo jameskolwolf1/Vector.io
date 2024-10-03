@@ -14,41 +14,42 @@
 
 @mixin PageHeader{
 
-    font-size: $m_pageHeader;
+    font-size: 3rem;
     line-height: 2.25rem;
     font-weight: 600;
     color: $primaryWhite;
 
     @include tabletView{
-        font-size: $dt_pageHeader;
+        font-size: 3rem;
         line-height: 2.5rem;
         font-weight: 600;
         color: $primaryWhite;
     }
     @include desktopView{
-        font-size: $dt_pageHeader;
+        font-size: 3.2rem;
         line-height: 2.5rem;
         font-weight: 600;
+        padding-bottom: 20px;
         color: $primaryWhite;
     }
 }
 @mixin subHeader{
 
-    font-size: $m_subHeader;
+    font-size: 2.3rem;
     line-height: 1.75rem;
     font-weight: 600;
     color: $primaryWhite;
 
     @include tabletView{
 
-        font-size: $dt_subHeader;
+        font-size: 2.3rem;
         line-height: 2rem;
         font-weight: 600;
         color: $primaryWhite;
     }
     @include desktopView{
 
-        font-size: $dt_subHeader;
+        font-size: 2.4rem;
         line-height: 2rem;
         font-weight: 600;
         color: $primaryWhite;
@@ -90,42 +91,42 @@
     }
 }
 @mixin bodyLarge{
-    font-size: $m_bodyLarge;
+    font-size: 1.5rem;
     line-height: 1.625rem;
     font-weight: 400;
     color: $primaryWhite;
 
     @include tabletView{
 
-        font-size: $dt_bodyLarge;
+        font-size: 1.8rem;
         line-height: 1.75rem;
         font-weight: 400;
         color: $primaryWhite;
     }
     @include desktopView{
 
-        font-size: $dt_bodyLarge;
+        font-size: 1.85rem;
         line-height: 1.75rem;
         font-weight: 400;
         color: $primaryWhite;
     }
 }
 @mixin bodyMedium{
-    font-size: $m_bodyMedium;
-    line-height: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     font-weight: 400;
     color: $primaryWhite;
 
     @include tabletView{
-        font-size: $dt_bodyMedium;
-        line-height: 1.375rem;
+        font-size: 1.6rem;
+        line-height: 1.5rem;
         font-weight: 400;
         color: $primaryWhite;
     }
     @include desktopView{
 
-        font-size: $dt_bodyMedium;
-        line-height: 1.375rem;
+        font-size: 1.65;
+        line-height: 2rem;
         font-weight: 400;
         color: $primaryWhite;
     }

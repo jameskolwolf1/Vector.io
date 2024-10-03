@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Posts(){
 
-    const [postList, setPostList] = useState([]);
+    const [postList, setPostList] = useState(null);
 
     useEffect(() => {
 
@@ -23,6 +23,10 @@ function Posts(){
         }
     }, [])
 
+    if(postList === null){
+
+        return<div>No posts Yets</div>
+    }
     if(postList.length === 0){
 
         return<div>Loading</div>
