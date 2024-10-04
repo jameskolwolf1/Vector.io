@@ -4,13 +4,13 @@
 
 >What is your app? Give a brief description in a couple of sentences.
 
-VectorIo is a website that will (as of right now) help tech people in IT departments like IT Help Desk, technicals, Relocation Technicians, IT support, and IT infrastructure. This website is made for quick and easy use with more common problems and information. Also if you have some not-so-common problems we do have forms that people can comment on and put their ideas together.
+VectorIo is a website that will (as of right now) help tech people in IT departments like IT Help Desk, technical, Relocation Technicians, IT support, and IT infrastructure. This website is made for quick and easy use with more common problems and information. Also if you have some not-so-common problems we do have forms that people can comment on and put their ideas together.
 
 ### Problem Space
 
 >Why is your app needed? Give any background information about any pain points or other reasons.
 
-Sometimes, when techs are looking for a solution to a problem, they have to do a lot of Google searching and click on another website. We are going to try to stop and also give information about the item, model, and version of that product to be more easily used.
+Sometimes when tech looking for a solution to a problem, we have to do a lot of Google searching and click on another website. We are going to try to stop and also give information about the item and model and version of that product, to be more easily used.
 
 
 ### Features And User Profile
@@ -34,7 +34,7 @@ research any potential limitations.
  - Axios
  - (Maybe More)
  Server libraries:
- - knex
+ - Knex
  - express
  - (Maybe More)
     
@@ -45,18 +45,20 @@ research any potential limitations.
  I'm going to make my API.
 
  No external APIs, I'm making my own
+ 
+ [CLick Here](https://github.com/jameskolwolf1/Vector.io_API)
 
 ### Sitemap
 
  > List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
  HomePage ("/")
- ComputerComponnets ("/ComputerComponnets")
- ComputerComponnet("/ComputerComponnet/:id")
- Posts("/ComputerComponnet/:id/Posts")
- Post("/ComputerComponnet/:id/Post/:id")
+ ComputerComponents ("/ComputerComponents")
+ ComputerComponent("/ComputerComponent/:id")
+ Posts("/ComputerComponent/:id/Posts")
+ Post("/ComputerComponent/:id/Post/:id")
  latestPost(/Posts)
- Abouts Page(/About)
+ About Page(/About)
 
  ![](PageRoute.jpeg)
 
@@ -70,7 +72,7 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 #### Post Page 
 ![](PostPage.jpg)
 
-#### ComputerComponitePage 
+#### ComputerComponentPage 
 ![](CompputerComponitePage.jpg)
 
 #### About Page
@@ -89,8 +91,8 @@ Describe your data and the relationships between the data points. You can show t
 
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
-**Get /ComputerComponites**
-- Get the List of ComputerComponites 
+**Get /ComputerComponents**
+- Get the List of ComputerComponents 
 
 No Parameters
 
@@ -101,7 +103,7 @@ Response:
  "id": 1,
  "title": "Display Port Cable (DP)",
  "image": "dp.png",
- "gerernal_info": "A DisplayPort cable is used to connect a 
+ "general_info": "A DisplayPort cable is used to connect a 
  computer or other device to a monitor or display device. It
  ....",
  "versionModel_id": 1,
@@ -113,7 +115,7 @@ Response:
  "id": 2,
  "title": "CAT5 (Ethernet Cable)",
  "image": "dp.png",
- "gerernal_info": "A DisplayPort cable is used to connect a 
+ "general_info": "A DisplayPort cable is used to connect a 
  computer or other device to a monitor or display device. It
  ....",
  "versionModel_id": 2,
@@ -125,10 +127,10 @@ Response:
 ]
 ```
 
-**Get /ComputerComponite/:id**
--Get will get the ComputerComponite by id
+**Get /ComputerComponent/:id**
+-Get will get the ComputerComponent by id
 Parameters:
-- id: ComputerComponite id as a number
+- id: ComputerComponent id as a number
 
 Response: 
 ```
@@ -137,7 +139,7 @@ Response:
  "id": 1,
  "title": "Display Port Cable (DP)",
  "image": "dp.png",
- "gerernal_info": "A DisplayPort cable is used to connect a 
+ "general_info": "A DisplayPort cable is used to connect a 
  computer or other device to a monitor or display device. It
  ....",
  "versionModel_id": 1,
@@ -147,11 +149,11 @@ Response:
  },
 ]
 ```
-**Get /ComputerComponite/:id/VersionOrModels**
-- Get will get the VersionORModel by looking at the VersionORModel ComputerComponite id which should be a list
+**Get /ComputerComponent/:id/VersionOrModels**
+- Get will get the VersionORModel by looking at the VersionORModel ComputerComponent id which should be a list
 
 Parameters:
-- id: ComputerComponite id as a number and as well of the VersionORModel 
+- id: ComputerComponent id as a number and as well of the VersionORModel 
 Response: 
 ```
 [
@@ -169,11 +171,11 @@ Response:
  },
 ]
 ```
-**Get /ComputerComponite/:id/solutions**
-- Get will get the solutions by looking at the solutions ComputerComponite ID which should be a list
+**Get /ComputerComponent/:id/solutions**
+- Get will get the solutions by looking at the solutions ComputerComponent ID which should be a list
 
 Parameters:
-- id: ComputerComponite id as a number and as well of the id of the solution
+- id: ComputerComponent id as a number and as well of the id of the solution
 Response: 
 ```
 [
@@ -191,13 +193,13 @@ Response:
 - Get will get the list of Post
 
 Parameters:
-- id: Post id, Comment id, and ComputerComponite id as a number
+- id: Post id, Comment id, and ComputerComponent id as a number
 Response: 
 ```
 [
  {
  "id": 1,
- "ComputerComponite_id": 1,
+ "ComputerComponent_id": 1,
  "comment_id": 1,
  "title": "Black screen with audio problem, I was trying to 
  fix the DP but it's not working",
@@ -209,14 +211,14 @@ Response:
 - Post will post a post 
 
 Parameters:
-- id: Post id, Comment id, and ComputerComponite id as a number
+- id: Post id, Comment id, and ComputerComponent id as a number
 
 Response: 
 ```
 [
  {
  "id": 1,
- "ComputerComponite_id": 1,
+ "ComputerComponent_id": 1,
  "comment_id": 1,
  "title": "Black screen with audio problem, I was trying to 
  fix the DP but it's not working",
@@ -289,7 +291,7 @@ Response:
 
 **Create migrations**
 
-**Create seeds with sample  ComputerComponite, Posts, Comment, Solution, and VersionOrModel**
+**Create seeds with sample  ComputerComponent, Posts, Comment, Solution, and VersionOrModel**
 
 **Create client**
 - react project with routes and pages
@@ -297,8 +299,8 @@ Response:
 **Features**
 - Home Page
 - List/Nav/Page for the Category
- - User can have a Nav bar to see what category or make a Pagfe for it
-- ComputerComponite Page when clicking the category and seeing the items and clicking on the items will give details about that item.
+ - User can have a Nav bar to see what category or make a Page for it
+- ComputerComponent Page when clicking the category and seeing the items and clicking on the items will give details about that item.
  - There will also be a list of solutions on that page
  - Also different versions or models with general info
 - Post Page will give a list of Post
@@ -316,4 +318,3 @@ Response:
 - Login and Register User System
 - More Data for Not only Computer Cable but Hardware, and Coding Computer Hardware
 - Dislike Button 
-

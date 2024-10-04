@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Posts(){
 
-    const [postList, setPostList] = useState([]);
+    const [postList, setPostList] = useState(null);
 
     useEffect(() => {
 
@@ -23,6 +23,10 @@ function Posts(){
         }
     }, [])
 
+    if(postList === null){
+
+        return<div>No posts Yets</div>
+    }
     if(postList.length === 0){
 
         return<div>Loading</div>
@@ -36,7 +40,7 @@ function Posts(){
                     <Link className="posts__link" key={post.id} to={`/post/${post.id}`}>
                     <div className="posts__items">
                         <h2 className="posts__title">{post.title}</h2>
-                        <p className="posts__info">{post.description}</p>
+                        <p className="posts__info mediumBody">{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}

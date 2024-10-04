@@ -46,7 +46,7 @@ function ThisComponentPosts(){
                     <Link className='thisComponent__link' key={post.id} to={`/post/${post.id}`}>
                     <div className='thisComponent__items'>
                         <h2 className='thisComponent__items-title'>{post.title}</h2>
-                        <p className='thisComponent__items-des'>{post.description}</p>
+                        <p className='thisComponent__items-des mediumBody'>{post.description}</p>
                     </div>
                     </Link>
                 )).reverse()}

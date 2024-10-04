@@ -6,7 +6,7 @@ import likeIcon from "/like_icon.png";
 
 function Post() {
   const [post, setPost] = useState(null);
-  const [commentList, setCommentList] = useState([]);
+  const [commentList, setCommentList] = useState(null);
   let { id } = useParams();
 
   async function getComments (){
@@ -32,9 +32,9 @@ function Post() {
   }, []);
 
   if (post === null) {
-    return <div>Loading</div>;
+    return <div>Posts is not available right now</div>;
   }
-  if (commentList.length === 0) {
+  if (commentList === 0) {
     return <div>Loading</div>;
   }
 
@@ -86,6 +86,16 @@ function Post() {
     }
 
   }
+  function getDate(date){
+
+    let datefomate = date.split(/[- :]/);
+    datefomate[1]--;
+
+    const convertDate = new Date(...datefomate);
+
+    return convertDate;
+
+  }
 
   return (
     <article className="post">
@@ -93,25 +103,27 @@ function Post() {
         <h1 className="post__title">
           {post.title}
         </h1>
-        <p className="post__des">
+        <p className="post__des mediumBody">
           {post.description}
         </p>
+        
       </div>
+
       <div className="post__from-container">
         <form onSubmit={handleSubmit} className="post__from">
 
             <h2 className="post__from-title">Post Comment</h2>
-            <textarea name="text" className="post__from-text"></textarea>
-            <button type="submit" className="post__from-button">Post Comment</button>
+            <textarea name="text" className="post__from-text mediumBody"></textarea>
+            <button type="submit" className="post__from-button mediumBody">Post Comment</button>
           
         </form>
       </div>
       <div className="post__comment-section">
-        <h2>Comments</h2>
+        <h2 className="post__comment-heading">Comments</h2>
         {commentList.map(comment =>
           <div key={comment.id} className="post__comment-container">
             <div className="post__comment-part1">
-              <p className="post__comment">
+              <p className="post__comment mediumBody">
                 {comment.text}
               </p>
             </div>
