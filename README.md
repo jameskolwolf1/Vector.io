@@ -66,12 +66,18 @@ research any potential limitations.
 
 Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
 
-#### Home Page 
+### Home Page Current Look
+![](vector_Home(D).png)
+
+#### Home Page Drawing
 ![](HomePage.jpg)
 
+### Post Page Current Look
+![](vector_post_component(D).png)
 #### Post Page 
 ![](PostPage.jpg)
 
+![]
 #### ComputerComponentPage 
 ![](CompputerComponitePage.jpg)
 
