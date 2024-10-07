@@ -75,7 +75,7 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 ### Post Page Current Look
 ![](vector_form_compontent(D).png)
 
-#### Post Page 
+#### Post Page Drawing
 ![](PostPage.jpg)
 
 ### ComputerComponentPage Current Look
