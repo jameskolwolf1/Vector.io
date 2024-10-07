@@ -73,18 +73,23 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 ![](HomePage.jpg)
 
 ### Post Page Current Look
-![](vector_post_component(D).png)
+![](vector_form_compontent(D).png)
+
 #### Post Page 
 ![](PostPage.jpg)
 
-![]
-#### ComputerComponentPage 
+### ComputerComponentPage Current Look
+![](vector_Article_dp(D).png)
+
+#### ComputerComponentPage Drawing
 ![](CompputerComponitePage.jpg)
 
 #### About Page
+Soon!
 ![](AboutPage.jpg)
 
 #### Other Ideas Drawings
+Soon!
 ![](OtherIdeasPages.jpg)
 
 ### Data
