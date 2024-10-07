@@ -111,29 +111,31 @@ Response:
 ```
 [
  {
- "id": 1,
- "title": "Display Port Cable (DP)",
- "image": "dp.png",
- "general_info": "A DisplayPort cable is used to connect a 
- computer or other device to a monitor or display device. It
- ....",
- "versionModel_id": 1,
- "update": "1223345432432",
- "category": "cable",
- "solution_id": 1;
- },
- {
- "id": 2,
- "title": "CAT5 (Ethernet Cable)",
- "image": "dp.png",
- "general_info": "A DisplayPort cable is used to connect a 
- computer or other device to a monitor or display device. It
- ....",
- "versionModel_id": 2,
- "update": "1223345432432",
- "category": "cable",
- "solution_id": 2;
- }
+        id: 1,
+        title: "DisplayPort Cable (DP)",
+        image_product: "http://localhost:8080/Cables/DisplayPort/image_0.jpg",
+        image_info: "http://localhost:8080/Cables/DisplayPort/info_0.jpg",
+        general_info: "A Display specifically designed ...,
+        category: "cable"
+      },
+      {
+        id: 2,
+        title: "HDMI Cable",
+        image_product: "http://localhost:8080/Cables/HDMI/image0.jpeg",
+        image_info: "http://localhost:8080/Cables/HDMI/info_0.jpg",
+        general_info:
+          "HDMI means High-Definition Multimedia Interface, a standard for simultaneously....",
+        category: "cable"
+      },
+      {
+        id: 3,
+        title: "Type C / USB-C Cable",
+        image_product: "http://localhost:8080/Cables/Type_C/image0.jpg",
+        image_info: "http://localhost:8080/Cables/Type_C/info_0.jpg",
+        general_info: "Type-C is slim enough for a smartphone or .....",
+
+        category: "cable"
+      },
  .........
 ]
 ```
@@ -146,18 +148,14 @@ Parameters:
 Response: 
 ```
 [
- {
- "id": 1,
- "title": "Display Port Cable (DP)",
- "image": "dp.png",
- "general_info": "A DisplayPort cable is used to connect a 
- computer or other device to a monitor or display device. It
- ....",
- "versionModel_id": 1,
- "update": "1223345432432",
- "category": "cable",
- "solution_id": 1;
- },
+    {
+        id: 2,
+        title: "HDMI Cable",
+        image_product: "http://localhost:8080/Cables/HDMI/image0.jpeg",
+        image_info: "http://localhost:8080/Cables/HDMI/info_0.jpg",
+        general_info: "HDMI means High-Definition Multimedia Interface, a standard for simu HDTVs had at least one HDMI port.....",
+        category: "cable"
+      },
 ]
 ```
 **Get /ComputerComponent/:id/VersionOrModels**
@@ -168,18 +166,14 @@ Parameters:
 Response: 
 ```
 [
- {
- "id": 1,
- "title": "Display Port Cable (DP)",
- "information": "VESA announced version 2.1 of the DisplayPort 
- standard on 17 October 2022. This version incorporates the
- new DP40 and DP80 cable certifications, which test 
- DisplayPort cables for proper operation at the UHBR10 
- (40  Gbit/s) and UHBR20 (80  Gbit/s) speeds introduced in 
- version 2.0. Additionally, it revises some of the electrical 
- requirements for DisplayPort devices in order to improve 
- integration with USB4."
- },
+    {
+        id: 2,
+        computerComponents_id: 1,
+        title: "DisplayPort 1.1 (2007)",
+        info1: "Max Resolution: 2560x1600 at 60Hz",
+        info2: "Bandwidth: 8.64 Gbps",
+        info3: "Key Features: Added support for DisplayPort-to-HDMI/DVI adapters and HDCP (High-bandwidth Digital Content Protection) for secure transmission of high-definition content."
+      },
 ]
 ```
 **Get /ComputerComponent/:id/solutions**
@@ -190,32 +184,28 @@ Parameters:
 Response: 
 ```
 [
- {
- "id": 1,
- "solution": "1.  **Verify Correct Cable Connection**: 
- Ensure the DP cable is properly connected to both the 
- source device (computer, graphics card, etc.) and 
- the display. Make sure the cable is fully seated in 
- both ports."
- },
+    {
+        id: 53,
+        computerComponents_id: 9,
+        text: "Overheating / High Temperatures: The Ryzen 7000 series processors can generate significant heat, so ensure the CPU cooler is adequate. Upgrade the cooling solution to a high-performance air cooler or liquid cooler if necessary. Ensure there is good case airflow by adding or repositioning fans inside the case to improve ventilation.",
+    },
 ]
 ```
 **Get /Posts**
 - Get will get the list of Post
 
 Parameters:
-- id: Post id, Comment id, and ComputerComponent id as a number
+- id: Post id and ComputerComponent id as a number
 Response: 
 ```
 [
- {
- "id": 1,
- "ComputerComponent_id": 1,
- "comment_id": 1,
- "title": "Black screen with audio problem, I was trying to 
- fix the DP but it's not working",
- "Post Date": 45534546745,*-+
- },
+    {
+        id: 1,
+        computerComponents_id: 1,
+        title: "No Signal Detected: Why is My Monitor Not Working?",
+        description: "I’ve got a new DP cable, but my monitor shows No Signal. Everything’s plugged in correctly. Could the cable be bad, or is there a DP version issue here? Any suggestions would help!",
+        post_date: timestamp.toISOString().slice(0, 19).replace('T', ' '),
+    },
 ]
 ```
 **Post  /Posts**
@@ -227,31 +217,60 @@ Parameters:
 Response: 
 ```
 [
- {
- "id": 1,
- "ComputerComponent_id": 1,
- "comment_id": 1,
- "title": "Black screen with audio problem, I was trying to 
- fix the DP but it's not working",
- "Post Date": 45534546745,*-+
- },
+{
+        id: 1,
+        computerComponents_id: 1,
+        title: "No Signal Detected: Why is My Monitor Not Working?",
+        description: "I’ve got a new DP cable, but my monitor shows No Signal. Everything’s plugged in correctly. Could the cable be bad, or is there a DP version issue here? Any suggestions would help!",
+        post_date: timestamp.toISOString().slice(0, 19).replace('T', ' '),
+      },
+      {
+        id: 2,
+        computerComponents_id: 1,
+        title: "Screen Flickering at High Refresh Rate – What’s Going On?",
+        description: "My monitor flickers like crazy at 144Hz with a DisplayPort connection, but it’s fine at 60Hz. Could this be a bandwidth problem with the cable, or should I look into the monitor settings?",
+        post_date: timestamp.toISOString().slice(0, 19).replace('T', ' '),
+  
+      },
+      {
+        id: 3,
+        computerComponents_id: 1,
+        title:"Getting Audio but No Video on DisplayPort Connection",
+        description: "I’m confused! My DisplayPort connection is delivering audio but no video. I’ve tried restarting everything and updating drivers. Could it be the cable, or is there something wrong with the graphics settings?",
+        post_date: timestamp.toISOString().slice(0, 19).replace('T', ' '),
+  
+      },
+      .....
 ]
 ```
 **Get /Post/:id/Comments**
 - Get will get the Comments for that specific post
 
 Parameters:
-- id: Post id, Comment id  as a number
+- id: Post id, computerComponent id  as a number
 
 Response: 
 ```
 [
- {
- "id": 1,
- "post_id": 1,
- "text": "Have u tried to push it all the way in",
- "likes": 0
- },
+{
+    id: 1,
+    posts_id: 1,
+    text: "Try using a different DisplayPort cable or port on the monitor and PC to rule out a faulty cable or port",
+    likes: 3
+  },
+  {
+    id: 2,
+    posts_id: 1,
+    text: "Ensure both your monitor and PC support the same DP version (e.g., DP 1.2, DP 1.4)",
+    likes: 3
+  },
+  {
+    id: 3,
+    posts_id: 1,
+    text: "Sometimes, outdated graphics drivers can cause issues. Update your GPU drivers to the latest version",
+    likes: 0
+  },
+  ...
 ]
 ```
 **Post /Post/:id/Comments**
@@ -265,7 +284,7 @@ Response:
 ```
 [
  {
- "id": 1,
+
  "post_id": 1,
  "text": 1,
  "likes": 0
@@ -274,7 +293,7 @@ Response:
 ```
 
 **Put /Post/:id/Comments**
-- put will change like a comment on that Post
+- put will change likes in a  comment 
 
 Parameters:
 - id: Post id, Comment id  as a number
