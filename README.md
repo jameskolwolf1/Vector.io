@@ -84,7 +84,7 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 #### ComputerComponentPage Drawing
 ![](CompputerComponitePage.jpg)
 
-#### About Page
+#### About Page Drawing
 Soon!
 ![](AboutPage.jpg)
 
