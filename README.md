@@ -109,7 +109,6 @@ No Parameters
 
 Response: 
 ```
-[
  {
         id: 1,
         title: "DisplayPort Cable (DP)",
@@ -137,7 +136,6 @@ Response:
         category: "cable"
       },
  .........
-]
 ```
 
 **Get /ComputerComponent/:id**
@@ -147,7 +145,6 @@ Parameters:
 
 Response: 
 ```
-[
     {
         id: 2,
         title: "HDMI Cable",
@@ -156,7 +153,6 @@ Response:
         general_info: "HDMI means High-Definition Multimedia Interface, a standard for simu HDTVs had at least one HDMI port.....",
         category: "cable"
       },
-]
 ```
 **Get /ComputerComponent/:id/VersionOrModels**
 - Get will get the VersionORModel by looking at the VersionORModel ComputerComponent id which should be a list
@@ -165,7 +161,6 @@ Parameters:
 - id: ComputerComponent id as a number and as well of the VersionORModel 
 Response: 
 ```
-[
     {
         id: 2,
         computerComponents_id: 1,
@@ -174,7 +169,6 @@ Response:
         info2: "Bandwidth: 8.64 Gbps",
         info3: "Key Features: Added support for DisplayPort-to-HDMI/DVI adapters and HDCP (High-bandwidth Digital Content Protection) for secure transmission of high-definition content."
       },
-]
 ```
 **Get /ComputerComponent/:id/solutions**
 - Get will get the solutions by looking at the solutions ComputerComponent ID which should be a list
@@ -183,13 +177,11 @@ Parameters:
 - id: ComputerComponent id as a number and as well of the id of the solution
 Response: 
 ```
-[
     {
         id: 53,
         computerComponents_id: 9,
         text: "Overheating / High Temperatures: The Ryzen 7000 series processors can generate significant heat, so ensure the CPU cooler is adequate. Upgrade the cooling solution to a high-performance air cooler or liquid cooler if necessary. Ensure there is good case airflow by adding or repositioning fans inside the case to improve ventilation.",
     },
-]
 ```
 **Get /Posts**
 - Get will get the list of Post
@@ -198,7 +190,6 @@ Parameters:
 - id: Post id and ComputerComponent id as a number
 Response: 
 ```
-[
     {
         id: 1,
         computerComponents_id: 1,
@@ -206,7 +197,6 @@ Response:
         description: "I’ve got a new DP cable, but my monitor shows No Signal. Everything’s plugged in correctly. Could the cable be bad, or is there a DP version issue here? Any suggestions would help!",
         post_date: timestamp.toISOString().slice(0, 19).replace('T', ' '),
     },
-]
 ```
 **Post  /Posts**
 - Post will post a post 
@@ -216,7 +206,6 @@ Parameters:
 
 Response: 
 ```
-[
 {
         id: 1,
         computerComponents_id: 1,
@@ -241,7 +230,6 @@ Response:
   
       },
       .....
-]
 ```
 **Get /Post/:id/Comments**
 - Get will get the Comments for that specific post
@@ -251,7 +239,6 @@ Parameters:
 
 Response: 
 ```
-[
 {
     id: 1,
     posts_id: 1,
@@ -271,7 +258,6 @@ Response:
     likes: 0
   },
   ...
-]
 ```
 **Post /Post/:id/Comments**
 - Post will Post a comment on that Post
@@ -282,14 +268,12 @@ Parameters:
 Response: 
 
 ```
-[
  {
 
  "post_id": 1,
  "text": 1,
  "likes": 0
  },
-]
 ```
 
 **Put /Post/:id/Comments**
@@ -301,11 +285,9 @@ Parameters:
 Response: 
 
 ```
-[
  {
  "likes": 1
  },
-]
 ```
 
 
