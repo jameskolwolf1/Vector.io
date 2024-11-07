@@ -32,10 +32,12 @@ research any potential limitations.
  - react
  - react-router
  - Axios
+ - Three.js
  - (Maybe More)
  Server libraries:
  - Knex
- - express
+ - Express.js
+ - Node.js
  - (Maybe More)
     
 
